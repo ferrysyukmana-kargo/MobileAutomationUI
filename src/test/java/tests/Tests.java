@@ -14,7 +14,7 @@ public class Tests extends BaseClass{
 	public void testOne(){
 		MobileElement one = driver.findElement(By.id("tech.kargo.transporter.staging.debug:id/kargo_button"));
 		
-		one.click();
+		//one.click();
 	}
 
 }
