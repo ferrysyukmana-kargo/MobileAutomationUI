@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test" verbose="2">
     <classes>
-      <class name="tests.Tests">
+      <class name="tests.driverapps.Login">
         <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="testOne"/>
+          <include name="testLogin"/>
         </methods>
-      </class> <!-- tests.Tests -->
+      </class> <!-- tests.driverapps.Login -->
+    </classes>
+  </test> <!-- Default test -->
+  <test parallel="none" name="Default test(failed)">
+    <classes>
+      <class name="tests.driverapps.Login">
+        <methods>
+          <include name="testLogin"/>
+          <include name="openMobileApps"/>
+          <include name="closeMobileApps"/>
+        </methods>
+      </class> <!-- tests.driverapps.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
